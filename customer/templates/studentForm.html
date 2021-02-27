@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action= "/customer/student/" method="post">
+             {% csrf_token %}
+	   		<table>
+
+				   <tr>
+			        <td><label id="deptLbl">StudentId:</label> </td>
+			        <td><input type="text" name="studentId"
+					value="{{id}}"/></td>
+			    </tr>
+			     <tr>
+			        <td><label id="deptLbl">Firstname:</label> </td>
+			        <td><input type="text" name="firstname"
+					value="{{firstname}}"/></td>
+			    </tr>
+                <tr>
+			        <td><label id="deptLbl">Lastname:</label> </td>
+			        <td><input type="text" name="lastname"
+					value="{{lastname}}"/></td>
+			    </tr>
+                <tr>
+			        <td><label id="deptLbl">Roll No</label> </td>
+			        <td><input type="text" name="rollNo"
+					value="{{rollno}}"/></td>
+			    </tr>
+				 <tr>
+			        <td><label id="deptLbl">Branch</label> </td>
+			        <td><input type="text" name="branch"
+					value="{{branch}}"/></td>
+			    </tr>
+
+                <tr>
+			        <td><label id="deptLbl">Age</label> </td>
+			        <td><input type="text" name="age"
+					value="{{age}}"/></td>
+			    </tr>
+                <tr>
+			        <td><label id="deptLbl">DOB:</label> </td>
+			        <td><input type="date" name="dob" value="{{dob}}"/></td>
+			    </tr>
+
+
+			    <tr>
+			      <td colspan="2">
+			      <input id="submit" type="submit" value="Submit"/></td>
+		      </tr>
+			</table>
+		</form>
+</body>
+</html>
