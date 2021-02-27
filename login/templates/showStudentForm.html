@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include "index.html" %}
+<div>
+    <form action="/login/submitStudentForm/" method="post">
+        {% csrf_token %}
+
+      <input placeholder="firstName" type="text" name="firstName"/>
+      <br><br>
+      <input placeholder="lastName" type="text" name="lastName"/>
+
+        <br><br>
+      <input type="text" placeholder="sem" name="sem"/>
+
+        <br><br>
+      <input type="text" placeholder="branch" name="branch"/>
+
+        <br><br>
+      <input id="submit" type="submit" value="submit"/>
+    </form>
+  </div>
+</body>
+</html>

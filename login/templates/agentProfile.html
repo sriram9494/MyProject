@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CustomerServices</title>
+</head>
+<body>
+<a href="/agent/agentLogout/">AgentLogout</a><br><br>
+
+     <form action="/agent/upload/" method = "post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.image }}
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>

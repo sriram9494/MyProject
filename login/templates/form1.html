@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include "index.html" %}
+<br>
+<br>
+
+<form action="/login/processForm1/" method="post">
+   {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+<br/>
+<br>
+
+
+<form action="/login/processForm1/" method="post">
+    {% csrf_token %}
+    {{ form.as_table}}
+    <input type="submit" value="Submit">
+</form>
+<br/>
+<br>
+
+
+<form action="/login/processForm1/" method="post">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <input type="submit" value="Submit">
+</form>
+<br/>
+<br>
+
+
+<form action="/login/processForm1/" method="post">
+    {% csrf_token %}
+    {{ form.as_ul}}
+    <input type="submit" value="Submit">
+</form>
+<br/>
+</form>
+<br/>
+</body>
+<!--
+the code  {{ form }} in the form1.html generates the form automatically.
+-->
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table border = "2" width="30%">
+        <tr>
+            <th>
+                Student
+            </th>
+            <th>
+                Address1
+            </th>
+            <th>
+                Address2
+            </th>
+            <th>
+                Address3
+            </th>
+        </tr>
+        <tr>
+            <td>
+
+                {{sObj.firstName}}
+                {{sObj.lastName}}
+
+            </td>
+            {% for p in aObj %}
+            <td>
+
+                {{p.hno}}
+                {{p.city}}
+                {{p.state}}
+                {{p.country}}
+                {{p.pin}}
+
+
+            </td>
+            {% endfor %}
+        </tr>
+    </table>
+</body>
+</html>

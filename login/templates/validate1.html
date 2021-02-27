@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validation</title>
+</head>
+<body>
+  <div>
+    <form action="validation1/" method="get">
+        {% csrf_token %}
+
+      <input placeholder="UserName" type="text" name="userName" >
+      <span>{{validity.0}}</span>
+        <br><br>
+      <input placeholder="Email Address" type="text" name="email" >
+      <span>{{validity.1}}</span>
+        <br><br>
+      <input type="password" placeholder="Password" name="password" >
+      <span>{{validity.2}}</span>
+        <br><br>
+      <input type="password" placeholder="Confirm Password" name="confirmPassword">
+        <span>{{validity.3}}</span>
+        <br><br>
+      <button  type="submit" name="submit" id="contact-submit" >Submit</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <table border = "2" width="30%">
+
+        <tr>
+        <th>firstName</th>
+        <th>LastName </th>
+        <th>HouseNo </th>
+        <th>City </th>
+        <th>State</th>
+        <th>Country</th>
+        <th>Pin No</th>
+        </tr>
+
+        {% for p in sObj %}
+
+
+        <tr>
+
+            <td>{{ p.firstName }} </td>
+            <td>{{ p.lastName }} </td>
+
+            <td>{{p.addr.hno}}</td>
+            <td>{{p.addr.city}}</td>
+            <td>{{p.addr.state}}</td>
+            <td>{{p.addr.country}}</td>
+            <td>{{p.addr.pin}}</td>
+
+        </tr>
+       {% endfor %}
+   </table>
+</body>
+</html>

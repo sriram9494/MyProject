@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <table border = "2" width="30%">
+
+        <tr>
+        <th>Student</th>
+        <th>Address</th>
+        </tr>
+
+        {% for p in sObj %}
+        {% if p.firstName != None and p.lastName != None %}
+      <tr>
+                <td>
+                   {{p.firstName}}
+                   {{p.lastName}}
+
+                </td>
+                <td>
+                    {% if p.addr.hno == None and p.addr.city == None and p.addr.state == None and p.addr.country == None  and p.addr.pin == None %}
+                        No Address is found for this Student
+                    {% else %}
+                        {{p.addr.hno}}
+                        {{p.addr.city}}
+                        {{p.addr.state}}
+                        {{p.addr.country}}
+                        {{p.addr.pin}}
+                    {% endif %}
+                </td>
+
+        </tr>
+        {% endif %}
+       {% endfor %}
+
+   </table>
+</body>
+</html>
