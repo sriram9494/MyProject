@@ -1,1 +1,2 @@
-print("Hello")
+x=90
+print(x)
